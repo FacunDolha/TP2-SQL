@@ -1,4 +1,4 @@
-package dao;
+package persinstence.commos;
 
 public class DaoFactory {
 	public static UsuarioDao getUsuarioDao() {

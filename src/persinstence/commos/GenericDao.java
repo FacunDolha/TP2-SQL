@@ -1,4 +1,4 @@
-package dao;
+package persinstence.commos;
 
 import java.sql.SQLException;
 import java.util.List;
