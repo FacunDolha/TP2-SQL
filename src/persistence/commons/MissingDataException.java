@@ -1,4 +1,4 @@
-package persinstence.commos;
+package persistence.commons;
 
 public class MissingDataException extends RuntimeException {
 	

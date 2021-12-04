@@ -1,4 +1,4 @@
-package persinstence.commos;
+package persistence.commons;
 
 public class DaoFactory {
 	public static UsuarioDao getUsuarioDao() {

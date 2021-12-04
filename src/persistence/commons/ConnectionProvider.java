@@ -1,4 +1,4 @@
-package persinstence.commos;
+package persistence.commons;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

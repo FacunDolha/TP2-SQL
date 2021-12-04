@@ -1,4 +1,4 @@
-package persinstence.commos;
+package persistence.commons;
 
 import java.sql.SQLException;
 import java.util.List;
