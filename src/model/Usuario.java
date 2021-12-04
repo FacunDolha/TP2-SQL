@@ -1,9 +1,26 @@
-package turismoTierraMedia;
+package model;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Usuario {
+
+	private Integer idUsuario;
+	private String username, password;
+	private Boolean admin;
+	private Integer presupuesto;
+	private Double tiempoDisponible;
+
+	public Usuario(Integer id, String username, String password, Integer coins, Double time, Boolean admin) {
+		super();
+		this.idUsuario = id;
+		this.username = username;
+		this.password = password;
+		this.presupuesto = coins;
+		this.tiempoDisponible = time;
+		this.admin = admin;
+	}
+/*public class Usuario {
 	private int idUsuario;
 	private String nombre;
 	public double presupuesto;
@@ -24,6 +41,8 @@ public class Usuario {
 		this.atraccionesAdquiridas = new ArrayList<Atraccion>();
 		this.promocionesAdquiridas = new ArrayList<Promocion>();
 	}
+
+
 
 	public int getIdUsuario() {
 		return idUsuario;
@@ -102,5 +121,62 @@ public class Usuario {
 				acceso = true;
 		}
 		return acceso;
+	} */
+
+	public Integer getIdUsuario() {
+		return idUsuario;
 	}
+
+	public void setIdUsuario(Integer idUsuario) {
+		this.idUsuario = idUsuario;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public Boolean getAdmin() {
+		return admin;
+	}
+	
+	public boolean isNull() {
+		return false;
+	}
+
+	public void setAdmin(Boolean admin) {
+		this.admin = admin;
+	}
+
+	public Integer getPresupuesto() {
+		return presupuesto;
+	}
+
+	public void setPresupuesto(Integer presupuesto) {
+		this.presupuesto = presupuesto;
+	}
+
+	public Double getTiempoDisponible() {
+		return tiempoDisponible;
+	}
+
+	public void setTiempoDisponible(Double tiempoDisponible) {
+		this.tiempoDisponible = tiempoDisponible;
+	}
+	
+	
+	
+	
+	
 }
