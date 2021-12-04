@@ -6,9 +6,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import db.ConnectionProvider;
+import persistence.commons.ConnectionProvider;
 import turismoTierraMedia.TipoAtraccion;
-import turismoTierraMedia.Usuario;
+import model.Usuario;
 
 public class UsuarioDao implements GenericDao<Usuario> {
 	public Usuario findByName(String nombre) throws SQLException {
