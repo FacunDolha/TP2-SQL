@@ -2,7 +2,7 @@ package utils;
 
 import org.mindrot.jbcrypt.BCrypt;
 
-public class Cript {
+public class Crypt {
 	private static final int ROUNDS = 13;
 	
 	public static String hash(String password) {
@@ -11,7 +11,7 @@ public class Cript {
 	}
 	
 	public static boolean match(String candidate, String hashed) {
-		return Bcrypt.checkpw(candidate, hashed);
+		return BCrypt.checkpw(candidate, hashed);
 	}
 
 }
