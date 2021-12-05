@@ -5,6 +5,9 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Comparator;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Atraccion extends Adquiribles implements Comparable<Atraccion> {
 	private int idAtraccion;
 	private String nombre;
@@ -26,11 +29,43 @@ public class Atraccion extends Adquiribles implements Comparable<Atraccion> {
 	public int getIdAtraccion() {
 		return idAtraccion;
 	}
+	
+	public boolean isValid() {
+		validate();
+		return errors.isEmpty();
+	}
+	
+	public void validate() {
+		errors = new HashMap<String, String>();
+
+		if (precio <= 0) {
+			errors.put("precio", "Debe ser positivo");
+		}
+		if (duracion <= 0) {
+			errors.put("duracion", "Debe ser positivo");
+		}
+		if (cupoPersonas <= 0) {
+			errors.put("cupo", "Debe ser positivo");
+		}
+	}
+	
+	public Map<String, String> getErrors() {
+		return errors;
+	}
 
 	public List<TipoAtraccion> getListaTiposAtraccion() {
 		List<TipoAtraccion> listaTipoAtraccion = new ArrayList<TipoAtraccion>();
 		listaTipoAtraccion.add(tipo);
 		return listaTipoAtraccion;
+	}
+	
+
+	public boolean canHost(int i) {
+		return cupoPersonas >= i;
+	}
+
+	public void host(int i) {
+		this.cupoPersonas -= i;
 	}
 
 	public String getNombre() {

@@ -6,8 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import db.ConnectionProvider;
-import turismoTierraMedia.Atraccion;
+import persistence.commons.ConnectionProvider;
+import model.Atraccion;
 import turismoTierraMedia.TipoAtraccion;
 
 public class AtraccionesDao {

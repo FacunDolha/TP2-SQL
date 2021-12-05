@@ -123,6 +123,26 @@ public class Usuario {
 		return acceso;
 	} */
 
+	public void addToItinerary(Atraccion attraction) {
+		this.presupuesto -= attraction.getPrecio();
+		this.tiempoDisponible -= attraction.getDuracion();
+		// TODO agregar a su lista
+	}
+
+	public boolean canAfford(Atraccion attraction) {
+		return attraction.getPrecio() <= this.presupuesto;
+	}
+
+	public boolean canAttend(Atraccion attraction) {
+		return attraction.getDuracion() <= this.tiempoDisponible;
+	}
+
+	public boolean checkPassword(String password) {
+		// this.password en realidad es el hash del password
+		return Crypt.match(password, this.password);
+	}
+
+	
 	public Integer getIdUsuario() {
 		return idUsuario;
 	}

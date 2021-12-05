@@ -12,7 +12,7 @@ public class LoginService {
     	Usuario user = userDao.findByUsername(username);
     	
     	if (user.isNull() || !user.checkPassword(password)) {
-    		user = NullUser.build();
+    		user = NullUsuario.build();
     	}
     	return user;
 	}
