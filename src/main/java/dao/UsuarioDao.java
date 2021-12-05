@@ -16,7 +16,7 @@ import model.nullobjects.NullUsuario;
 
 public class UsuarioDao implements GenericDao<Usuario> {
 
-	public Usuario findByUserame(String username) {
+	public Usuario findByUsername(String username) {
 		try {
 
 			String query = "SELECT * FROM usuarios WHERE username = ?";
@@ -90,7 +90,7 @@ public class UsuarioDao implements GenericDao<Usuario> {
 			throw new MissingDataException(e);
 		}
 	}
-
+B
 	public int delete(Usuario usuario) {
 		try {
 			String sqlQuery = "DELETE FROM USERS WHERE USERNAME = ?";

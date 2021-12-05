@@ -1,5 +1,7 @@
 package persistence.commons;
 
+import main.java.dao.*;
+
 public class DaoFactory {
 	public static UsuarioDao getUsuarioDao() {
 		return new UsuarioDao();
