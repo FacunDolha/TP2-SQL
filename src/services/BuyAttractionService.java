@@ -11,7 +11,7 @@ import persistence.commons.DaoFactory;
 
 public class BuyAttractionService {
 
-	AtraccionesDao attractionDAO = DaoFactory.getAtracionesDao();
+	AtraccionesDao attractionDAO = DaoFactory.getAtraccionesDao();
 	UsuarioDao userDAO = DaoFactory.getUsuarioDao();
 
 	public Map<String, String> buy(Integer userId, Integer attractionId) {

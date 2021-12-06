@@ -27,7 +27,7 @@ public class AttractionService {
 
 	public Atraccion update(Integer id, String name, Integer cost, Double duration, Integer capacity) {
 
-		AtraccionesDao attractionDAO = DaoFactory.getAttractionDAO();
+		AtraccionesDao attractionDAO = DaoFactory.getAtraccionesDao();
 		Atraccion attraction = attractionDAO.find(id);
 
 		attraction.setNombre(name);
