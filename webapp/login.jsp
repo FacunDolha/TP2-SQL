@@ -4,44 +4,88 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-<jsp:include page="partials/head.jsp"></jsp:include>
+* {
+  box-sizing: border-box;
+}
+
+.bg-img {
+  /* La imagen usada */
+  background-image: url("https://www.rionegro.com.ar/wp-content/uploads/2019/06/Hielo-Azul.jpg?w=920&h=517&resize=920,517");
+
+  min-height: 380px;
+
+  /* Imagen centrada */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Estilos del container */
+.container {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  max-width: 300px;
+  padding: 16px;
+  background-color: white;
+}
+
+/* tamaño de los campos de ingreso */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Estilo del boton de ingresar */
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+</style>
 </head>
 <body>
 
+<h2>Turismo Tierra Media</h2>
+<div class="bg-img">
 
-	<div class="col-lg-5 mx-auto p-3 py-md-5">
+  <form action="login" class="container" method="post" >
+    <h1>Bienvenido!</h1>
 
-		<main>
-			<h1>Turismo en la Tierra Media</h1>
+    <label for="usuario"><b>Usuario</b></label>
+    <input type="text" class="form-control" placeholder="Usuario" name="username" required>
 
+    <label for="psw"><b>Contraseña</b></label>
+    <input type="password" class="form-control" placeholder="Contraseña" name="password" required>
 
-			<c:if test="${flash != null}">
-				<div class="alert alert-danger">
-					<p>
-						<c:out value="${flash}" />
-					</p>
-				</div>
-			</c:if>
+    <button type="submit" class="btn">Ingresar</button>
+  </form>
+ 
+</div>
 
-			<form action="login" method="post">
-
-				<div class="mb-3">
-					<label for="username" class="form-label">Usuario</label> <input
-						class="form-control" name="username">
-				</div>
-
-				<div class="mb-3">
-					<label for="password" class="form-label">Contraseña</label> <input
-						type="password" class="form-control" name="password">
-				</div>
-
-				<div class="d-grid gap-2">
-					<button type="submit" class="btn btn-lg btn-primary">Ingresar</button>
-				</div>
-			</form>
-
-		</main>
-	</div>
 </body>
 </html>
