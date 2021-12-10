@@ -17,9 +17,9 @@
 			</div>
 		</c:if>
 
-		<form action="/turismo/attractions/edit.do" method="post">
+		<form action="/turismoTierraMedia/attractions/edit.do" method="post">
 			<input type="hidden" name="id" value="${attraction.id}">
-			<jsp:include page="/views/attractions/form.jsp"></jsp:include>
+			<jsp:include page="/views.attractions/form.jsp"></jsp:include>
 		</form>
 	</main>
 </body>

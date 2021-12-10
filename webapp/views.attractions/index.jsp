@@ -33,7 +33,7 @@
 
 		<c:if test="${user.isAdmin()}">
 			<div class="mb-3">
-				<a href="/turismo/attractions/create.do" class="btn btn-primary"
+				<a href="/turismoTierraMedia/attractions/create.do" class="btn btn-primary"
 					role="button"> <i class="bi bi-plus-lg"></i> Nueva Atracción
 				</a>
 			</div>
@@ -71,7 +71,7 @@
 							<c:choose>
 								<c:when
 									test="${user.canAfford(attraction) && user.canAttend(attraction) && attraction.canHost(1)}">
-									<a href="/turismo/attractions/buy.do?id=${attraction.id}"
+									<a href="/turismoTierraMedia/attractions/buy.do?id=${attraction.id}"
 										class="btn btn-success rounded" role="button">Comprar</a>
 								</c:when>
 								<c:otherwise>
