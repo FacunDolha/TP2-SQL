@@ -3,6 +3,8 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
+import utils.Crypt;
+
 public class Usuario {
 
 	private Integer idUsuario;
